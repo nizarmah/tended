@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme.NoActionBar">
         <meta-data
             android:name="com.google.android.nearby.messages.API_KEY"
-            android:value="AIzaSyAYs_8yspeha0ChBEBUC3ceOZwOcm1AhvI" />
+            android:value="" />
 
         <activity
             android:name=".LoginActivity"
