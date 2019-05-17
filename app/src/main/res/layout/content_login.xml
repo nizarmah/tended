@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/row_vertical_padding"
+            android:paddingLeft="@dimen/row_horizontal_padding"
+            android:paddingRight="@dimen/row_horizontal_padding"
+            android:paddingTop="@dimen/row_spacing">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingBottom="@dimen/row_vertical_padding"
+                android:paddingLeft="@dimen/row_horizontal_padding"
+                android:paddingRight="@dimen/row_horizontal_padding"
+                android:paddingTop="@dimen/row_vertical_padding">
+
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/row_horizontal_padding"
+                    android:layout_marginRight="@dimen/row_horizontal_padding"
+                    android:src="@drawable/ic_human_greeting_stroke_black_24dp"
+                    android:tint="@color/colorPrimary" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/loginForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:orientation="vertical"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true">
+
+                <EditText
+                    android:id="@+id/userID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Your ID"
+                    android:inputType="number"
+                    android:paddingLeft="@dimen/row_spacing"
+                    android:paddingRight="@dimen/row_spacing"
+                    android:singleLine="true"
+                    android:textSize="@dimen/size_regular" />
+
+                <EditText
+                    android:id="@+id/userEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Your Email"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="@dimen/row_spacing"
+                    android:paddingRight="@dimen/row_spacing"
+                    android:singleLine="true"
+                    android:textSize="@dimen/size_regular" />
+
+                <EditText
+                    android:id="@+id/userPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Your Password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="@dimen/row_spacing"
+                    android:paddingRight="@dimen/row_spacing"
+                    android:singleLine="true"
+                    android:textSize="@dimen/size_regular" />
+
+                <Button
+                    android:id="@+id/loginButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/row_spacing"
+                    android:background="@drawable/button_stroked"
+                    android:elevation="0dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:onClick="login"
+                    android:text="Login"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/size_regular" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:id="@+id/view_background_delete"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorRed">
+
+        <ImageView
+            android:layout_width="@dimen/size_regular"
+            android:layout_height="@dimen/size_regular"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/row_horizontal_padding"
+            android:src="@drawable/ic_delete_black_24dp"
+            android:tint="@android:color/white"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/view_background_edit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGreen">
+
+        <ImageView
+            android:layout_width="@dimen/size_regular"
+            android:layout_height="@dimen/size_regular"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/row_horizontal_padding"
+            android:src="@drawable/ic_edit_black_24dp"
+            android:tint="@android:color/white"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/view_foreground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:paddingBottom="15dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/row_vertical_padding"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:id="@+id/courseInfo"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/courseName"
+                android:text="Course Name"
+                android:textSize="@dimen/size_regular"
+                android:textColor="@color/textPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular" />
+
+            <TextView
+                android:id="@+id/courseTime"
+                android:text="Start Time - End Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/size_mini"
+                android:textColor="@color/textSecondary"
+                android:fontFamily="@font/poppins_regular" />
+
+            <TextView
+                android:id="@+id/courseDays"
+                android:text="M T W R F"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/size_mini"
+                android:textColor="@color/textSecondary"
+                android:fontFamily="@font/poppins_regular" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/studentsCourseInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/courseInfo"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/row_horizontal_padding"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/numSkips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semi"
+                    android:text="2"
+                    android:textAlignment="center"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/size_header" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Skips Left"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/size_mini" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/row_spacing"
+                android:layout_marginLeft="@dimen/row_horizontal_padding"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/numAbscents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semi"
+                    android:text="2"
+                    android:textAlignment="center"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/size_header" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Abscences"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/size_mini" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

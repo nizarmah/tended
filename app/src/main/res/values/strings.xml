@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Tended</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="attendance_warning">Kindly do not close this. This makes sure you attended class. Therefore, closing it would automatically set you to abscent.</string>
+</resources>

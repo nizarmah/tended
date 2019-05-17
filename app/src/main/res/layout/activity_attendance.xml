@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/coordinatorLayoutAttendance"
+    tools:context="me.nizarmah.tended.AttendanceActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:paddingBottom="@dimen/row_vertical_padding"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/row_vertical_padding"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:background="@android:color/white"
+                android:layout_marginBottom="@dimen/row_spacing">
+
+            </RelativeLayout>
+
+            <TextView
+                android:text="Attendance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/textPrimary"
+                android:textSize="@dimen/size_title" />
+
+            <TextView
+                android:text="Verifying you attended class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/textSecondary"
+                android:textSize="@dimen/size_subtitle" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/attendanceBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/row_vertical_padding"
+            android:paddingLeft="@dimen/row_horizontal_padding"
+            android:paddingRight="@dimen/row_horizontal_padding"
+            android:paddingTop="@dimen/row_spacing">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingBottom="@dimen/row_vertical_padding"
+                android:paddingLeft="@dimen/row_horizontal_padding"
+                android:paddingRight="@dimen/row_horizontal_padding"
+                android:paddingTop="@dimen/row_vertical_padding">
+
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/row_horizontal_padding"
+                    android:layout_marginRight="@dimen/row_horizontal_padding"
+                    android:src="@drawable/ic_human_greeting_stroke_black_24dp"
+                    android:tint="@color/colorPrimary" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/loginForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:orientation="vertical"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/attendance_warning"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/textSecondary"
+                    android:textSize="@dimen/size_mini"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

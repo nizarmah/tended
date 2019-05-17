@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.nizarmah.tended.AddCourseActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/row_spacing"
+            android:paddingLeft="@dimen/row_horizontal_padding"
+            android:paddingRight="@dimen/row_horizontal_padding"
+            android:paddingBottom="@dimen/row_vertical_padding"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true">
+
+            <EditText
+                android:id="@+id/courseName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Course Name"
+                android:textSize="@dimen/size_regular"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingLeft="@dimen/row_spacing"
+                android:paddingRight="@dimen/row_spacing"
+                android:singleLine="true"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/row_spacing"
+                android:paddingRight="@dimen/row_spacing">
+
+                <CheckedTextView
+                    android:id="@+id/mondayCheckbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/row_spacing"
+                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                    android:checked="false"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingLeft="@dimen/row_spacing"
+                    android:paddingRight="@dimen/row_spacing"
+                    android:text="Monday"
+                    android:textSize="@dimen/size_regular"
+                    android:onClick="toggleCheckedTextView" />
+
+                <CheckedTextView
+                    android:id="@+id/tuesdayCheckbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/row_spacing"
+                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                    android:checked="false"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingLeft="@dimen/row_spacing"
+                    android:paddingRight="@dimen/row_spacing"
+                    android:text="Tuesday"
+                    android:textSize="@dimen/size_regular"
+                    android:onClick="toggleCheckedTextView" />
+
+                <CheckedTextView
+                    android:id="@+id/wednesdayCheckbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/row_spacing"
+                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                    android:checked="false"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingLeft="@dimen/row_spacing"
+                    android:paddingRight="@dimen/row_spacing"
+                    android:text="Wednesday"
+                    android:textSize="@dimen/size_regular"
+                    android:onClick="toggleCheckedTextView" />
+
+                <CheckedTextView
+                    android:id="@+id/thursdayCheckbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/row_spacing"
+                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                    android:checked="false"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingLeft="@dimen/row_spacing"
+                    android:paddingRight="@dimen/row_spacing"
+                    android:text="Thursday"
+                    android:textSize="@dimen/size_regular"
+                    android:onClick="toggleCheckedTextView" />
+
+                <CheckedTextView
+                    android:id="@+id/fridayCheckbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/row_spacing"
+                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                    android:checked="false"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingLeft="@dimen/row_spacing"
+                    android:paddingRight="@dimen/row_spacing"
+                    android:text="Friday"
+                    android:textSize="@dimen/size_regular"
+                    android:onClick="toggleCheckedTextView" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:hint="From"
+                    android:inputType="time"
+                    android:id="@+id/startTime"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/size_regular"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_marginTop="@dimen/row_spacing"
+                    android:paddingLeft="@dimen/row_spacing"
+                    android:paddingRight="@dimen/row_spacing" />
+
+                <EditText
+                    android:hint="To"
+                    android:inputType="time"
+                    android:id="@+id/endTime"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/size_regular"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_marginTop="@dimen/row_spacing"
+                    android:paddingLeft="@dimen/row_spacing"
+                    android:paddingRight="@dimen/row_spacing" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/courseSheet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Course Sheet"
+                android:textSize="@dimen/size_regular"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="@dimen/row_spacing"
+                android:paddingRight="@dimen/row_spacing"
+                android:focusable="false"
+                android:clickable="true"
+                android:singleLine="true"
+                android:onClick="openFileSelector" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

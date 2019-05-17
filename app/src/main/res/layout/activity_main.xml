@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/coordinatorLayoutMain"
+    tools:context="me.nizarmah.tended.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:paddingBottom="@dimen/row_vertical_padding"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/row_vertical_padding"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:layout_marginBottom="@dimen/row_spacing">
+
+                <ImageButton
+                    android:visibility="gone"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:tint="@color/textPrimary"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_chevron_left_black_24dp"
+                    android:background="@android:color/transparent" />
+
+                <ImageButton
+                    android:id="@+id/logout"
+                    android:onClick="logout"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:tint="@color/textPrimary"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/row_horizontal_padding"
+                    android:src="@drawable/ic_logout_black_24dp"
+                    android:background="@android:color/transparent" />
+
+                <ImageButton
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_toLeftOf="@id/logout"
+                    android:layout_marginRight="@dimen/row_horizontal_padding"
+                    android:background="@android:color/transparent"
+                    android:onClick="listAllCourses"
+                    android:src="@drawable/ic_event_note_black_24dp"
+                    android:tint="@color/textPrimary" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:text="Today"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/textPrimary"
+                android:textSize="@dimen/size_title" />
+
+            <TextView
+                android:id="@+id/todayDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/textSecondary"
+                android:textSize="@dimen/size_subtitle" />
+
+        </LinearLayout>
+
+        <include layout="@layout/content_main" />
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_add_black_24dp"
+        android:tint="@android:color/white" />
+
+</android.support.design.widget.CoordinatorLayout>

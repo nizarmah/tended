@@ -1,0 +1,18 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="size_mini">12sp</dimen>
+    <dimen name="size_subtitle">15sp</dimen>
+    <dimen name="size_regular">16sp</dimen>
+    <dimen name="size_large">20sp</dimen>
+    <dimen name="size_header">24sp</dimen>
+    <dimen name="size_title">30sp</dimen>
+
+    <dimen name="activity_vertical_margin">18dp</dimen>
+    <dimen name="activity_horizontal_margin">18dp</dimen>
+
+    <dimen name="row_vertical_padding">18dp</dimen>
+    <dimen name="row_horizontal_padding">18dp</dimen>
+
+    <dimen name="row_spacing">8dp</dimen>
+</resources>
