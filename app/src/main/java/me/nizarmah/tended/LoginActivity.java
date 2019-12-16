@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
 
         userType = sharedPreferences.getInt("userType", -1);
 
-        if (true || userType != -1) {
+        if (userType != -1) {
             Intent intent = new Intent(LoginActivity.this, AttendanceActivity.class);
             intent.putExtra("userType", userType);
             startActivity(intent);
